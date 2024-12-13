@@ -1,15 +1,18 @@
 body {
+  box-sizing: border-box;
+  position: relative;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #222;
+  display: block;
+  background-color: #d5bbbb;
 }
 
-canvas {
-  border: 2px solid white;
+#gameCanvas {
+	border: 2px solid white;
+	height: 100%;
+	width: 100%;
+	display: block;
+	position: relative;
 }
 
 #gameOver {
@@ -17,7 +20,7 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #000;
   font-size: 36px;
   display: none;
 }
@@ -26,6 +29,28 @@ canvas {
   position: absolute;
   top: 10px;
   left: 10px;
-  color: white;
+  color: black;
   font-size: 20px;
 }
+
+.col-container {
+	width: 100%;
+	height: 100vh;
+  display: block;
+}
+
+.col-instructions, 
+.col-game {
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+  min-height: calc(100vh - 20px);
+}
+
+.col-instructions {
+  min-width: 30%;
+} 
+.col-game {
+  min-width: 60%;
+}
+

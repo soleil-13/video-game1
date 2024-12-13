@@ -1,5 +1,13 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
+
+function resizeCanvas() { 
+    canvas.width = canvas.clientWidth; 
+    canvas.height = canvas.clientHeight; 
+} 
+window.addEventListener('resize', resizeCanvas); 
+resizeCanvas();
+
 const gameOverText = document.getElementById('gameOver');
 const highScoreText = document.getElementById('highScore');
 
@@ -134,6 +142,7 @@ function update() {
 }
 
 // Start the game loop
+resizeCanvas()
 update();
 
 // Restart the game when pressing 'S' key

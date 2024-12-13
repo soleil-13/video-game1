@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dodge Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
 </head>
-<body>
-    <canvas id="gameCanvas" width="500" height="700"></canvas>
-    <div id="gameOver">Game Over! Press S to Restart</div>
-    <div id="highScore">High Score: 0</div>
+<body class="">
+    <div class="col-container">
+        <div class="col-instructions">
+            <h2>Instruction</h2>
+            <p>Move left and right with arrow keys to dodge obstacles</p>
+        </div>
+        <div class="col-game">
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOver">Game Over! Press S to Restart</div>
+            <div id="highScore">High Score: 0</div>    
+        </div>
+    </div>
 </body>
 <footer>
     <script src="script.js"></script>
